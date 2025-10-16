@@ -1,42 +1,66 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* src/App.css */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f6f8;
+  margin: 0;
+  padding: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app {
+  max-width: 640px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px 24px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 { margin: 0 0 12px; font-size: 24px; }
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+input[type="text"] {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+button {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #5cb85c;
+  color: white;
+  font-weight: 600;
+}
+button.delete {
+  background: #e25b5b;
+  padding: 6px 10px;
+  font-size: 13px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
-.card {
-  padding: 2em;
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8px;
+  border-bottom: 1px solid #f0f0f0;
 }
-
-.read-the-docs {
+.todo-item .text { margin-left: 8px; }
+.todo-item.done .text {
+  text-decoration: line-through;
   color: #888;
+}
+.empty {
+  color: #666;
+  padding: 10px;
 }
